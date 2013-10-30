@@ -65,6 +65,11 @@ static NSString *CellIdentifier = @"Cell";
     return cell;
 }
 
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"Fun With Tables";
+}
+
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     UILabel *foo = [[UILabel alloc] init];
