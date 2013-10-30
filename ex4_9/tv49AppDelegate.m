@@ -7,13 +7,17 @@
 //
 
 #import "tv49AppDelegate.h"
+#import "ViewController.h"
 
 @implementation tv49AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+    ViewController *controller = [[ViewController alloc] initWithStyle:UITableViewStylePlain];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    self.window.rootViewController = controller;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
