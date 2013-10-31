@@ -72,10 +72,14 @@ static NSString *CellIdentifier = @"Cell";
 
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
+    
+    return [[[NSBundle mainBundle] loadNibNamed:@"CustomView" owner:self options:nil] lastObject];
+    /*
     UILabel *foo = [[UILabel alloc] init];
     foo.text = @"eddie would go";
     
     return foo;
+     */
 }
 
 /*
