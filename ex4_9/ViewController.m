@@ -35,7 +35,7 @@ static NSString *CellIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,14 +72,7 @@ static NSString *CellIdentifier = @"Cell";
 
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    
     return [[[NSBundle mainBundle] loadNibNamed:@"CustomView" owner:self options:nil] lastObject];
-    /*
-    UILabel *foo = [[UILabel alloc] init];
-    foo.text = @"eddie would go";
-    
-    return foo;
-     */
 }
 
 /*
